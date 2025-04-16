@@ -2,18 +2,17 @@
 
 This is my personal portfolio and blog website, built with [Next.js](https://nextjs.org/), [Once-UI](https://once-ui.com/), and [MDX](https://mdxjs.com/). It requires Node.js v18.17+. 
 
-** Website: ** [My Website](https://demo.magic-portfolio.com).
+* Website: [My Website](https://demo.magic-portfolio.com).
 
 ## Tech Stack
 
 - **Frontend**: [`Next.js`](https://nextjs.org/) (App Router), [`Once-UI`](https://once-ui.com/), `TypeScript`
-- **Styling**: `SCSS`, `Tailwind-like utilities`, responsive layout via Once-UI
 - **Markdown Blog**: MDX-based blog posts with dynamic routing
 - **Features**:
   - Table of Contents for blog posts
   - Scroll-to-section with offset handling
   - Smooth anchor links
-- **Hosting**: [CloudFlare](https://www.cloudflare.com/) (fully supported by Next.js)
+- **Hosting**: [`CloudFlare`](https://www.cloudflare.com/)
 
 ## Getting started
 
@@ -33,5 +32,4 @@ npm run dev
 ```
 
 ## Acknowledgements
-This website was originally based on the amazing [Magic Portfolio](https://github.com/once-ui-system/magic-portfolio) project by [Once-UI](https://once-ui.com/).  
-Big thanks to the team for creating such a clean and well-documented design system.
+This website was originally based on the [Magic Portfolio](https://github.com/once-ui-system/magic-portfolio) project by [Once-UI](https://once-ui.com/). 
