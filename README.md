@@ -1,7 +1,8 @@
 # My Personal Website – Built with Next.js, Once-UI, and MDX
-This is my personal portfolio and blog website, built with [Next.js](https://nextjs.org/), [Once-UI](https://once-ui.com/), and [MDX](https://mdxjs.com/). It requires Node.js v18.17+.
 
-View [My Website](https://demo.magic-portfolio.com).
+This is my personal portfolio and blog website, built with [Next.js](https://nextjs.org/), [Once-UI](https://once-ui.com/), and [MDX](https://mdxjs.com/). It requires Node.js v18.17+. 
+
+** Website: ** [My Website](https://demo.magic-portfolio.com).
 
 ## Tech Stack
 
@@ -31,5 +32,6 @@ npm install
 npm run dev
 ```
 
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fcover.png)
+## Acknowledgements
+This website was originally based on the amazing [Magic Portfolio](https://github.com/once-ui-system/magic-portfolio) project by [Once-UI](https://once-ui.com/).  
+Big thanks to the team for creating such a clean and well-documented design system.
