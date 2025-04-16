@@ -8,6 +8,7 @@ import {
   HiArrowUpRight,
   HiOutlineArrowPath,
   HiCheck,
+  HiMiniEllipsisVertical,
   HiMiniQuestionMarkCircle,
   HiMiniXMark,
   HiOutlineLink,
@@ -19,6 +20,7 @@ import {
   HiArrowTopRightOnSquare,
   HiEnvelope,
   HiCalendarDays,
+  HiOutlineDocument,
   HiClipboard,
   HiArrowRight,
   HiOutlineEye,
@@ -33,7 +35,7 @@ import {
   PiImageDuotone,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaHashtag } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
@@ -43,6 +45,7 @@ export const iconLibrary: Record<string, IconType> = {
   refresh: HiOutlineArrowPath,
   arrowUpRight: HiArrowUpRight,
   check: HiCheck,
+  hashtag: FaHashtag,
   arrowRight: HiArrowRight,
   helpCircle: HiMiniQuestionMarkCircle,
   infoCircle: HiInformationCircle,
@@ -64,7 +67,9 @@ export const iconLibrary: Record<string, IconType> = {
   eyeOff: HiOutlineEyeSlash,
   github: FaGithub,
   linkedin: FaLinkedin,
+  document: HiOutlineDocument,
   x: FaXTwitter,
+  vertical: HiMiniEllipsisVertical,
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
 };

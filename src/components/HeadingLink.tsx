@@ -12,26 +12,19 @@ interface HeadingLinkProps {
   style?: React.CSSProperties;
 }
 
-export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, style }) => {
-  const { addToast } = useToast();
+export const scrollToHeading = (id: string, offset: number = 96) => {
+  const el = document.getElementById(id);
+  if (!el) return;
 
-  const copyURL = (id: string): void => {
-    const url = `${window.location.origin}${window.location.pathname}#${id}`;
-    navigator.clipboard.writeText(url).then(
-      () => {
-        addToast({
-          variant: "success",
-          message: "Link copied to clipboard.",
-        });
-      },
-      () => {
-        addToast({
-          variant: "danger",
-          message: "Failed to copy link.",
-        });
-      },
-    );
-  };
+  const y = el.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth",
+  });
+};
+
+export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, style }) => {
 
   const variantMap = {
     1: "display-strong-xs",
@@ -48,7 +41,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
   return (
     <Flex
       style={style}
-      onClick={() => copyURL(id)}
+      onClick={() => scrollToHeading(id, 80)}
       className={styles.control}
       vertical="center"
       gap="4"
@@ -59,9 +52,8 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
       <IconButton
         className={styles.visibility}
         size="s"
-        icon="openLink"
+        icon="hashtag"
         variant="ghost"
-        tooltip="Copy"
         tooltipPosition="right"
       />
     </Flex>

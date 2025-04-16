@@ -138,38 +138,13 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Flex
-                fitWidth
-                border="brand-alpha-medium"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Flex>
-            )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
+            <Heading className={styles.textAlign} variant="display-strong-xl" marginBottom="s" >
               {person.name}
             </Heading>
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
-              onBackground="neutral-weak"
+              onBackground="neutral-medium"
             >
               {person.role}
             </Text>
@@ -204,7 +179,7 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column textVariant="body-default-l" onBackground="neutral-strong" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
             </Column>
           )}
@@ -214,7 +189,7 @@ export default function About() {
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <Column fillWidth gap="xl" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
@@ -225,7 +200,7 @@ export default function About() {
                         {experience.timeframe}
                       </Text>
                     </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                    <Text variant="body-default-m" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
                     <Column as="ul" gap="16">
@@ -239,9 +214,15 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
-                    {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
+                    {experience.images && experience.images.length > 0 && (
+                      <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {experience.images.map((image, index) => (
+                        <a
+                        href={image.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.hover_image} 
+                        >
                           <Flex
                             key={index}
                             border="neutral-medium"
@@ -252,7 +233,6 @@ export default function About() {
                             height={image.height}
                           >
                             <SmartImage
-                              enlarge
                               radius="m"
                               //@ts-ignore
                               sizes={image.width.toString()}
@@ -260,8 +240,10 @@ export default function About() {
                               alt={image.alt}
                               //@ts-ignore
                               src={image.src}
+                              style = {{ overflow: 'hidden'}}
                             />
                           </Flex>
+                        </a>
                         ))}
                       </Flex>
                     )}
@@ -278,19 +260,42 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
+                  <Column key={`${institution.name}-${index}`} fillWidth gap="2">
+                  <Flex fillWidth horizontal="space-between" vertical="center" marginBottom="2">
+                    <Column>
+                      <Text id={institution.name} variant="heading-strong-l" marginBottom="4">
+                        {institution.name}
+                      </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-medium">
+                        {institution.degree} in {institution.major}
+                      </Text>
+                    </Column>
+                    {institution.timeframe && (
+                      <Text variant="heading-default-xs" onBackground="neutral-medium">
+                        {institution.timeframe}
+                      </Text>
+                    )}
+                  </Flex>
+                  {institution.descriptions && (
+                    <Column as="ul">
+                      {institution.descriptions.map((desc: JSX.Element, index: number) => (
+                        <Text
+                          as="li"
+                          variant="body-default-s"
+                          key={`${institution.name}-desc-${index}`}
+                          onBackground="neutral-medium"
+                          marginTop="4"
+                        >
+                          {desc}
+                        </Text>
+                      ))}
+                    </Column>
+                  )}
+                </Column>
                 ))}
               </Column>
             </>
           )}
-
           {about.technical.display && (
             <>
               <Heading
@@ -301,39 +306,17 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth gap="m">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={index} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
+                    <Flex wrap gap="8">
+                      {skill.tags.map((tag, i) => (
+                        <Tag key={i} size="m" variant="neutral" className={styles.hover_tags} >
+                          {tag}
+                        </Tag>
+                      ))}
+                    </Flex>
                   </Column>
                 ))}
               </Column>

@@ -6,6 +6,7 @@ import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
+import BlogTOC from "@/components/blog/BlogTOC";
 
 interface BlogParams {
   params: {
@@ -75,6 +76,7 @@ export default function Blog({ params }: BlogParams) {
 
   return (
     <Column as="section" maxWidth="xs" gap="l">
+      <BlogTOC />
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -103,7 +105,7 @@ export default function Blog({ params }: BlogParams) {
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>
       <Row gap="12" vertical="center">
         {avatars.length > 0 && <AvatarGroup size="s" avatars={avatars} />}
-        <Text variant="body-default-s" onBackground="neutral-weak">
+        <Text variant="body-default-s" onBackground="neutral-medium">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
       </Row>
