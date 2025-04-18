@@ -196,7 +196,7 @@ export default function About() {
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      <Text variant="heading-default-xs" onBackground="neutral-medium">
                         {experience.timeframe}
                       </Text>
                     </Flex>

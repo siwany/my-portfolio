@@ -33,7 +33,7 @@ const social = [
   {
     name: "Resume",
     icon: "document",
-    link: "https://docs.google.com/document/d/1oQDeSiIjHlhycXNfgpNPRDLMBV8gaQpxIhvaK3ISxVI/edit?usp=sharing",
+    link: "/files/Resume.pdf",
   }
 ];
 
@@ -70,9 +70,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-      Welcome to my website!<br /> I'm a 4th-year CS undergrad at Georgia Tech with a passion for AI, LLMs, and NLP.
-     I enjoy tackling real-world problems using machine learning and LLMs by building practical solutions.<br/>
-      Feel free to reach out if you'd like to connect!
+      Siwan is a CS student at Georgia Tech whose passions span AI, LLMs, and machine learning. 
+      She enjoys building chatbots and developing user-centered technologies that apply language models to solve real-world problems. 
+      Her interests also include research in computational linguistics and the intersection of language and technology.
       </>
     ),
   },
@@ -110,7 +110,7 @@ const about = {
           {
             src: "/images/work/jms-guide.png",
             alt: "JMS Guide PDF Document",
-            url: "final_open_liberty.pdf",
+            url: "/files/final_open_liberty.pdf",
             width: 16,
             height: 9,
           },
@@ -139,11 +139,11 @@ const about = {
     skills: [
       {
         title: "Languages",
-        tags: ["Java", "Python", "C", "C++", "SQL", "Javascript", "R"],
+        tags: ["Java", "Python", "C", "SQL", "Javascript", "R"],
       },
       {
         title: "Frameworks & Libraries",
-        tags: ["React", "Next.js", "TailwindCSS", "RestfulAPI"],
+        tags: ["React", "Next.js", "TailwindCSS", "RestfulAPIs"],
       },
       {
         title: "AI & ML",
