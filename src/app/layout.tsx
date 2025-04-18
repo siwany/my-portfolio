@@ -11,6 +11,8 @@ import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 
 export async function generateMetadata() {
   return {
@@ -151,7 +153,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             flex={1}
           >
             <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
+              <RouteGuard>{children}<SpeedInsights /> <Analytics/> </RouteGuard>
             </Flex>
           </Flex>
           <Footer />
