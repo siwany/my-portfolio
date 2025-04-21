@@ -87,16 +87,16 @@ const about = {
         role: "Software Engineering Intern",
         achievements: [
           <>
-            Designed and implemented a Java-based web application utilizing JMS, RESTful APIs, and Open Liberty, enabling
-            asynchronous communication between microservices, improving message processing efficiency and system reliability.
+            Designed and developed a Java-based web application integrating JMS and RESTful APIs to enable asynchronous communication between client and microservices, 
+            resulting in improved message processing efficiency and enhanced system reliability.
           </>,
           <>
-            Developed and authored a 3,000+ word technical guide on setting up Jakarta Messaging with Liberty Messaging Server and
+            Developed and authored a 3,000+ word technical guide on setting up Jakarta Messaging with Open Liberty Messaging Server and
             IBM MQ, now published as an official Open Liberty guide.
           </>,
           <>
-            Optimized automated testing for Open Liberty guides by modifying YAML-based test workflows, reducing CI/CD failures by
-            90% and improving test coverage across all related documentation.
+            Optimized automated testing for Open Liberty guides by enhancing YAML-based CI/CD workflows, 
+            reducing failures by 90% and improving test file efficiency and coverage across all related documentation.
           </>
         ],
         images: [

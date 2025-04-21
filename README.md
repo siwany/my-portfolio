@@ -2,7 +2,7 @@
 
 This is my personal portfolio and blog website, built with [Next.js](https://nextjs.org/), [Once-UI](https://once-ui.com/), and [MDX](https://mdxjs.com/). It requires Node.js v18.17+. 
 
-[**Visit my live website**](https://demo.magic-portfolio.com)
+[**Visit my live website**](siwanyang.com)
 
 ## Tech Stack
 
