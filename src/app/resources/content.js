@@ -82,6 +82,26 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Samsung Electronics",
+        timeframe: "June 2025 - Aug 2025",
+        role: "Software Engineering Intern",
+        achievements: [
+          <>
+            Developed a JetBrains IDE plugin for Codemate on a Gradle and Kotlin-based architecture, 
+            adapting VS Code core logic to enable LLM-powered chat, code completion, and Retrieval-Augmented Generation (RAG) 
+            in IntelliJ and PyCharm.
+          </>,
+          <>
+            Refactored and centralized shared configuration modules (environment settings, product metadata, token handling) 
+            into a reusable core layer, eliminating duplicate logic and improving maintainability across multiple IDE environments.
+          </>,
+          <>
+            Designed and implemented a secure credential management flow for JetBrains using the platform’s native PasswordSafe API, 
+            including a new token input UI and protocol-based request/response handling for authentication and feature access.
+          </>
+        ],
+      },
+      {
         company: "IBM Research - Open Liberty",
         timeframe: "May 2024 - Aug 2024",
         role: "Software Engineering Intern",
@@ -139,19 +159,19 @@ const about = {
     skills: [
       {
         title: "Languages",
-        tags: ["Java", "Python", "C", "SQL", "Javascript", "R"],
+        tags: ["Java", "Python", "C", "C++", "SQL", "Javascript", "Kotlin", "R"],
       },
       {
         title: "Frameworks & Libraries",
-        tags: ["React", "Next.js", "TailwindCSS", "RestfulAPIs"],
+        tags: ["React", "Next.js", "TailwindCSS", "Gradle", "RestfulAPIs"],
       },
       {
         title: "AI & ML",
-        tags: ["LLM Integration", "RAG", "VectorDB", "Embeddings"],
+        tags: ["LLM Integration", "RAG", "Vectorization", "Embeddings"],
       },
       {
         title: "Databases & Cloud",
-        tags: ["Firebase", "MySQL", "Supabase", "MongoDB"],
+        tags: ["Firebase", "MySQL", "Supabase", "MongoDB", "Vercel"],
       },
       {
         title: "Tools",
