@@ -1,6 +1,8 @@
 # My Personal Website – Built with Next.js, Once-UI, and MDX
 
 This is my personal portfolio and blog website, built with [Next.js](https://nextjs.org/), [Once-UI](https://once-ui.com/), and [MDX](https://mdxjs.com/). It requires Node.js v18.17+. 
+<img width="1486" height="673" alt="image" src="https://github.com/user-attachments/assets/1ed8accf-45e0-4dea-a804-cbcabd4caaec" />
+
 
 [**Visit my live website**](https://siwanyang.com/)
 
